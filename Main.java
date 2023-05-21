@@ -3,6 +3,6 @@ import java.awt.*;*/
 
 public class Main {
     public static void main(String[] args){
-        new frame3();
+        new frame4();
     }
 }

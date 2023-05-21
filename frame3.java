@@ -3,10 +3,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class frame3 extends JFrame /*implements ActionListener*/ {
+public class frame3 extends JFrame implements ActionListener {
 
     JTextField textField = new JTextField();
+    JRadioButton pizza = new JRadioButton("pizza");
+    JRadioButton hamburguer = new JRadioButton("hamburguer");
+    JRadioButton cachorroQuente = new JRadioButton("cachorro-quente");
+    JCheckBox checkBox = new JCheckBox();
     JButton button = new JButton("Enviar");
+
+    ImageIcon x = new ImageIcon("luffy2.jpg");
+    ImageIcon v = new ImageIcon("GTA-V-Logo-PNG-Image.png");
     /*JButton button = new JButton("abrir nova janela");
     public frame3(){
         setSize(500,500); so funciona porque ela exstende do JFrame
@@ -66,5 +73,56 @@ public class frame3 extends JFrame /*implements ActionListener*/ {
         }
     }*/
 
+    /*public frame3() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+        this.pack();
 
+        ImageIcon x = new ImageIcon("luffy2.jpg");
+        ImageIcon v = new ImageIcon("GTA-V-Logo-PNG-Image.png");
+
+        checkBox.setText("Eu não sou um robo");
+        checkBox.setFocusable(false);
+        checkBox.setIcon(x);
+        checkBox.setSelectedIcon(v);
+
+        button.setText("Enviar");
+        button.addActionListener(this);
+
+        add(checkBox);
+        add(button);
+        setVisible(true);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == button){
+            //checkBox
+        }
+    }*/
+
+    public frame3(){
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+        this.pack();
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(pizza);
+        group.add(hamburguer);
+        group.add(cachorroQuente);
+
+        pizza.addActionListener(this);
+        pizza.setIcon(v);
+
+        add(pizza);
+        add(hamburguer);
+        add(cachorroQuente);
+        setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == pizza){
+            System.out.println("pizza");
+        }
+    }
 }

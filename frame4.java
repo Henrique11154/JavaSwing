@@ -1,0 +1,2 @@
+public class frame4 {
+}

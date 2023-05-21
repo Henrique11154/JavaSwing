@@ -86,6 +86,7 @@ public class frame2 extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLayeredPane layeredPane = new JLayeredPane(); // colocar as coisa tipo em 3D
         layeredPane.setBounds(100,50, 250,250);
+
         JLabel label = new JLabel("SAlve");
         label.setOpaque(true);
         label.setBackground(Color.RED);
